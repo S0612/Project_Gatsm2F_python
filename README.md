@@ -130,7 +130,7 @@ The estimates reproduce the CMA-ES estimates in the thesis using MATLAB. The log
 estimates is 18566.99 and at the thesis CMA-ES estimates (rounded to six decimals) it is
 18566.97. Starting from the thesis values and from the PCA start gives the same likelihood.
 
-| Parameter | Python | Thesis, CMA-ES |
+| Parameter | Python, Nelder-Mead Optimiser | Thesis (MATLAB), CMA-ES Optimiser|
 |---|---|---|
 | phiQ11 | 0.998022 | 0.998022 |
 | phiQ22 | 0.969682 | 0.969681 |
