@@ -59,7 +59,7 @@ python estimate.py --yields US_monthly_yields_Jan1972_Dec2025.csv --start 1972-0
 ## Data used
 
 Data used is from the U.S. Federal Reserve Board (see https://www.federalreserve.gov/pubs/feds/2006/200628/200628abs.html).
-Specifically it is the zero-coupon Svensson yields estimated by Gurkaynak, Sack, and Wright (2006). 
+Specifically it is the zero-coupon Svensson yields estimated by Gurkaynak, Sack, and Wright (2007). 
 
 ## How the estimation works
 
@@ -174,3 +174,6 @@ The risk neutral parameters, the short rate intercept and the measurement error 
 unbiased. The full table is in `results/mc_bias_table.csv`.
 
 ![Monte Carlo distributions](results/mc_distributions.png)
+
+### References
+- Gürkaynak, Refet S., Brian Sack, and Jonathan H. Wright. "The US Treasury yield curve: 1961 to the present." Journal of monetary Economics 54.8 (2007): 2291-2304.
