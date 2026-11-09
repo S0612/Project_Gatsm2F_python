@@ -1,15 +1,11 @@
-# Two factor Gaussian affine term structure model in Python
+# A Two-factor Gaussian Affine Term Structure Model (GATSM) in Python
 
-A Python version of the estimation and Monte Carlo code from my master's thesis
-*Survey Expectations and Finite-Sample Bias in a Macro-Finance Gaussian Affine Term
-Structure Model* (Aarhus University, 2026). The original MATLAB code is in
-[Project_MScThesis](https://github.com/S0612/Project_MScThesis).
+This is a personal project of mine, where I tried to replicate my estimation of the two-factor GATSM from my Master's Thesis in Python. Mostly done out of curiosity and for Python experience.
 
-This is a simplified version. It covers the two factor model only: maximum
-likelihood estimation with a Kalman filter, a Monte Carlo study of finite sample bias,
-and a decomposition of yields into expected short rates and term premia. It does not
-include the four factor model, the survey expectations or the CMA-ES optimiser from
-the thesis.
+The repository covers:
+- Model description
+- Numerical model estimation via Kalman-Filtering for the factors and Nelder-Mead optimisation for the parameters.
+- Monte Carlo simulations to check for bias in Physical-dynamics (P) parameters, with focus on the factor coefficients specifically (The phiP matrix). 
 
 ## The model
 
