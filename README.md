@@ -3,7 +3,7 @@
 This is a personal project of mine, where I tried to replicate my estimation of the two-factor GATSM from my Master's Thesis in Python. Mostly done out of curiosity and for Python experience.
 
 The repository covers:
-- Model description
+- Model description.
 - Numerical model estimation via Kalman-Filtering for the factors and Nelder-Mead optimisation for the parameters.
 - Monte Carlo simulations to check for bias in Physical-dynamics (P) parameters, with focus on the factor coefficients specifically (The phiP matrix). 
 
@@ -33,8 +33,7 @@ python monte_carlo.py --params results/params_estimated.json --R 1000   # estima
 python -m pytest tests
 ```
 
-To use other data: The format is the one used in the thesis, a CSV
-with one row per month and one column per maturity, yields in percent and no header,
+Code takes CSV as data input where there is one row per month and one column per maturity, yields in percent and no header,
 plus a second CSV `<name>_maturities.csv` with one row of maturities in years.
 
 ```
@@ -52,19 +51,19 @@ python estimate.py --yields US_monthly_yields_Jan1972_Dec2025.csv --start 1972-0
 | `plotting.py` | Figures |
 | `tests/test_gatsm.py` | Checks against independent implementations |
 
-## Data used
+## Data
 
 Data used is from the U.S. Federal Reserve Board (see https://www.federalreserve.gov/pubs/feds/2006/200628/200628abs.html).
 Specifically it is the zero-coupon Svensson yields estimated by Gurkaynak, Sack, and Wright (2007). 
 
-## How the estimation works
+## Estimation
 
 - The log likelihood comes from a Kalman filter written with numba. After the state
   covariance has converged (about 16 months here) the filter switches to the steady
   state recursion, so one likelihood evaluation takes roughly 0.2 ms.
 - The likelihood is maximised using the Nelder-Mead simplex on an unconstrained transformation of the
   parameters, restarted until it stops improving. `estimate.py` starts from two points
-  (the thesis starting values and a PCA based start) and reports both, so you can see
+  (the thesis starting values and a PCA-based start) and reports both, so you can see
   whether they reach the same likelihood.
 - Standard errors are outer product of scores (OPG) standard errors.
 - The expected short rate for a given maturity is the average of the expected short rates
