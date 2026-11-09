@@ -121,7 +121,7 @@ All output is in `results/`. The data are US monthly yields, January 1972 to Dec
 
 ### Check against the thesis
 
-The estimates reproduce the CMA-ES estimates in the thesis using MATLAB. The log likelihood at the Python
+The Python code reproduce the CMA-ES estimates from the thesis (MATLAB). The log-likelihood at the Python
 estimates is 18566.99 and at the thesis CMA-ES estimates (rounded to six decimals) it is
 18566.97. Starting from the thesis values and from the PCA start gives the same likelihood.
 
