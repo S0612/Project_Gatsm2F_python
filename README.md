@@ -9,7 +9,7 @@ The repository covers:
 
 ## Theoretical Framework
 
-- The general theoretical framework can be found in the 'Thesis.pdf' Section 3 from https://github.com/S0612/Project_MScThesis. 
+- The  theoretical framework in full can be found in the 'Thesis.pdf' Section 3 from https://github.com/S0612/Project_MScThesis. 
 - The imposed identification measures imposed on the two-factor version is in 'Thesis.pdf' Section 4.
 
 ## The model system in the code is defined as
