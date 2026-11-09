@@ -7,7 +7,12 @@ The repository covers:
 - Numerical model estimation via Kalman-Filtering for the factors and Nelder-Mead optimisation for the parameters.
 - Monte Carlo simulations to check for bias in Physical-dynamics (P) parameters, with focus on the factor coefficients specifically (The phiP matrix). 
 
-## The model
+## Theoretical Framework
+
+- The general theoretical framework can be found in the 'Thesis.pdf' Section 2 from https://github.com/S0612/Project_MScThesis. 
+- The imposed identification measures imposed on the two-factor version is in 'Thesis.pdf' Section 3.
+
+## The model system in the code is defined as
 
 Time is monthly and yields are annualised decimals.
 
